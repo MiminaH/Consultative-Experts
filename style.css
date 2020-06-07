@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: "Montserrat", sans-serif; */
+  text-align: right;
+  /* rtl > fixes probelm with punctuation displaying at beginning of sentence. */
+  direction: rtl;
+}
+
+/* :root applies properties only on the root element. */
+:root {
+  overflow-x: hidden;
+  /* Website theme colors */
+  --green: #55CD59;
+  --purple: #6c006c;
+  --blue: #262060;
+  --orange: #FF7F4A;
+  --bg-white: #FFFFFF;
+  --bg-grey: #F9F9F9;
+  --filler-grey: #F3F3F3;
+  --nav-text: #D5D1D1;
+  --header-text: #C3C3C3;
+  --text: #707070;
+  --text-lighter: #B9B9B9;
+  /* color: var(--text); */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/************* GENERIC CLASSES *************/
+.white_section {
+  background-color: var(--bg-white);
+  display: flex;
+  flex-direction: column;
+}
+
+.grey_section {
+  background-color: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+}
+
+.section_title_div {
+  display: flex;
+  margin: 60px 0 40px 0;
+  font-size: 1.4rem;
+  color: #C11C2C;
+}
+
+.section_title_vertical_line {
+  margin: 0 13% 0 15px;
+  content: '';
+  width: 3px;
+  height: 33px;
+  border-radius: 5px;
+  background: #C11C2C;
+}
+
+.section_title_div p {
+  color: black;
+  font-size: 1rem;
+  margin: auto 30px;
+}
+
+/************* NAVBAR *************/
+.double_nav_div {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: white;
+}
+
+.logo_img {
+  width: 230px;
+  height: 60px;
+  padding-right: 13%;
+}
+
+.nav_links_div {
+  background-color: var(--blue);
+  padding: 17px 13% 17px 0;
+}
+
+.nav_links_div a {
+  text-decoration: none;
+  color: #FAFAFA;
+  margin-left: 40px;
+  font-size: 1.2rem;
+}
+
+.nav_links_div a:hover {
+  color: #C11C2C;
+}
+
+.contact_us_btn_div {
+  display: inline;
+  background-color: #C11C2C;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0.45rem 0.7rem;
+}
+
+.contact_us_btn_div a {
+  margin: 0 auto;
+}
+
+.contact_us_btn_div a:hover {
+  color: var(--blue);
+}
+
+/************* HEADER *************/
+.header_div {
+  min-height: 35vh;
+  position: relative;
+  text-align: cover;
+}
+
+.header_div img {
+  max-width: 100%;
+  max-height: auto;
+  object-fit: scale-down;
+}
+
+.header_text {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  margin: 3% 0;
+}
+
+.header_text h1 {
+  color: white;
+  background-color: rgba(193, 28, 44, 0.2);
+  border-radius: 10px;
+  font-size: 2.2rem;
+  padding: 0.2rem 0.7rem;
+  text-shadow: 1px 1px 10px black;
+}
+
+/************* ABOUT-US SECTION *************/
+h3 {
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.about-us_paragraphs {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  margin: 0 8%;
+}
+
+.about-us_paragraph {
+  display: flex;
+  flex-direction: column;
+  margin: 0 7%;
+  font-size: 1.13rem;
+  line-height: 1.6rem;
+  width: 335px;
+}
+
+.about-us_paragraph p {
+  margin-bottom: 15%;
+}
+
+/************* OUR-SERVICES SECTION *************/
+.services_cards_div {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  margin: 0 8% 5%;
+}
+
+.service_card {
+  display: flex;
+  height: 75px;
+  width: 350px;
+  margin: 10px 6%;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--bg-white);
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
+  border: solid thin lightgrey;
+}
+
+.service_icon {
+  height: 50px;
+  width: 50px;
+  margin: 0 20px 0 30px;
+}
+
+/************* OUT-CUSTOMERS SECTION *************/
+.customers_cards_div {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  margin: 0 13% 6%;
+}
+
+.customer_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 250px;
+  margin: 10px 10px;
+  border-radius: 10px;
+  background-color: var(--bg-white);
+  /* box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2); */
+  border: solid thin lightgrey;
+}
+
+.customer_card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: fill;
+}
+
+/************* CONTACT-US SECTION *************/
+.contac-us_section {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--blue);
+  color: white;
+}
+
+.contact_us_title_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 13% 40px 0;
+  font-size: 1.4rem;
+  background-color: #C11C2C;
+  color: #FAFAFA;
+  border-radius: 5px;
+  width: 100px;
+  padding: 0.45rem 0.7rem;
+}
+
+.contact-us_details_div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 15% 5%;
+}
+
+.contact-us_info_div {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.13rem;
+  line-height: 1.6rem;
+}
+
+/************* FOOTER *************/
+footer {
+  /* position: relative; */
+  background-color: var(--blue);
+  color: white;
+}
+
+.copyright_div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5px;
+}
+
+.copyright_p {
+  direction: ltr;
+  line-height: 25px;
+  font-size: 0.8rem;
+  color: #B9B9B9;
+  /* margin-right: auto; */
+  /* bottom: 0; */
+}
+
+.created-by_p {
+  font-size: 0.8rem;
+  line-height: 25px;
+  color: #B9B9B9;
+  /* margin-right: auto; */
+}
+
+.created-by_p a {
+  color: #03a9f4;
+}
