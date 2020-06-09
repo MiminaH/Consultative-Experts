@@ -29,6 +29,11 @@ html {
   scroll-behavior: smooth;
 }
 
+h3 {
+  font-size: 1.5rem;
+  color: black;
+}
+
 /************* GENERIC CLASSES *************/
 .white_section {
   background-color: var(--bg-white);
@@ -144,10 +149,83 @@ html {
   text-shadow: 1px 1px 10px black;
 }
 
-/************* ABOUT-US SECTION *************/
-h3 {
+/************* ANNOUNCEMENTS SECTION *************/
+.announcements_border {
+  border: solid 5px #262060;
+  margin: 3% 6%;
+}
+
+#announcements .section_title_div {
+  margin: 20px 0 10px 0;
+}
+
+#announcements .section_title_vertical_line {
+  margin: 0 7.5% 0 15px;
+}
+
+.announcements_div {
+  display: flex;
+  justify-content: center;
+}
+
+.round_btn {
+  align-self: center;
+  margin: 0 2% 5%;
+  padding: 7px 10px;
+  color: #C11C2C;
   font-size: 1.5rem;
-  color: black;
+  text-decoration: none;
+  border: solid 1px lightgrey;
+  border-radius: 50%;
+}
+
+.round_btn:hover {
+  background-color: #f1f1f1;
+}
+
+.announcement_wrapper_div {
+  display: flex;
+  flex-direction: column;
+  width: 275px;
+  height: 375px;
+  margin: 20px 40px 80px;
+  border: solid 1px lightgrey;
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.announcement_wrapper_div img {
+  max-width: 100%;
+}
+
+.announcement_text_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 185px;
+  margin: 0 10px;
+  padding: 15px 20px 0px;
+  border: solid 1px lightgrey;
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.announcement_paragraph {
+  height: 90px;
+  overflow: hidden;
+  /* hidden to prevent text from overflowing outside of div. */
+}
+
+.announcement_date {
+  font-size: 0.9rem;
+  color: #707070;
+}
+
+.announcement_text_div a {
+  align-self: flex-end;
+  margin: 10px 0;
+}
+
+/************* ABOUT-US SECTION *************/
+#about-us h3 {
   margin-bottom: 10px;
 }
 
@@ -162,9 +240,9 @@ h3 {
   display: flex;
   flex-direction: column;
   margin: 0 7%;
-  font-size: 1.13rem;
-  line-height: 1.6rem;
-  width: 335px;
+  font-size: 1.15rem;
+  line-height: 1.7rem;
+  width: 360px;
 }
 
 .about-us_paragraph p {
@@ -176,26 +254,28 @@ h3 {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
-  margin: 0 8% 5%;
+  margin: 0 0 5%;
 }
 
 .service_card {
   display: flex;
-  height: 75px;
-  width: 350px;
-  margin: 10px 6%;
   justify-content: flex-start;
   align-items: center;
-  border-radius: 5px;
-  background-color: var(--bg-white);
-  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
+  height: 80px;
+  width: 325px;
+  margin: 10px 7%;
+  padding: 0 20px;
   border: solid thin lightgrey;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--bg-white);
+  cursor: pointer;
 }
 
 .service_icon {
   height: 50px;
   width: 50px;
-  margin: 0 20px 0 30px;
+  margin-left: 25px;
 }
 
 /************* OUT-CUSTOMERS SECTION *************/
@@ -227,7 +307,7 @@ h3 {
 }
 
 /************* CONTACT-US SECTION *************/
-.contac-us_section {
+#contact-us {
   display: flex;
   flex-direction: column;
   background-color: var(--blue);
@@ -278,7 +358,8 @@ footer {
   line-height: 25px;
   font-size: 0.8rem;
   color: #B9B9B9;
-  /* margin-right: auto; */
+  margin: 0 auto;
+  transform: translateX(-50px);
   /* bottom: 0; */
 }
 
@@ -286,7 +367,6 @@ footer {
   font-size: 0.8rem;
   line-height: 25px;
   color: #B9B9B9;
-  /* margin-right: auto; */
 }
 
 .created-by_p a {
