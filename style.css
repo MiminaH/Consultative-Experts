@@ -121,23 +121,25 @@ h3 {
 
 /************* HEADER *************/
 .header_div {
-  min-height: 35vh;
+  /* min-height: 40vh; */
   position: relative;
   text-align: cover;
+  min-height: 30vh;
+  /* margin-top: 25%; */
 }
 
 .header_div img {
   max-width: 100%;
-  max-height: auto;
-  object-fit: scale-down;
+  min-height: 60vh;
+  object-fit: cover;
 }
 
 .header_text {
   position: absolute;
-  top: 50%;
+  top: 60%;
   right: 50%;
   transform: translate(50%, -50%);
-  margin: 3% 0;
+  /* margin: 25% 0; */
 }
 
 .header_text h1 {

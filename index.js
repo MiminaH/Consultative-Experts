@@ -1,13 +1,5 @@
 // jshint esversion:6
 
-// const sectionIds = ["#announcements", "#about-us", "#our-services", "#our-customers", "#contact-us" ];
-//
-// $('html,body').animate({
-//   scrollTop: $("#about-us").offset().top - 120
-// });
-
-
-
 /* TO-DO:
     - style the scrolling bar on the right.
     - add elment appeearance animation upon loading the website or scrolling to a section.
@@ -16,19 +8,48 @@
     - services: add services details when clicking a service card.
     - customers: (?)put customer logos in a carousel that scrolls automotically once loaded.
     - contact-us:
+        - add location on map.
         - add messaging boxes (name, email/number, message).
         - send message via email or whatsapp.
     - responsive for mobile:
         - navbar: put nav items in hamburger menue button
+  (done)- header: fix header issue in smaller screens.
         - footer: move copyright to be on the left instead of in center.
 */
 
 // ANNOUNCEMENTS SECTION -------------------------------------
 const announcements = [{
-  "title":"",
-  "date":"",
-  "text":""
-}];
+  "title":"النباء الأول",
+  "date":"٩\\٠٦\\٢٠٢٠",
+  "text":"نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل. نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل.نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل."
+},
+{
+  "title":"النباء الثاني",
+  "date":"٩\\٠٦\\٢٠٢٠",
+  "text":"نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل."
+},
+{
+  "title":"النباء الثالث",
+  "date":"٩\\٠٦\\٢٠٢٠",
+  "text":"نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل."
+},];
+
+function announcementTemplate(announcement) {
+  return `<div class="announcement_wrapper_div">
+    <div class="announcement_img">
+      <img src="images\\announcements.jpg" alt="">
+    </div>
+    <div class="announcement_text_div">
+      <h3>${announcement.title}</h3>
+      <p class="announcement_date">${announcement.date}</p>
+      <p class="announcement_paragraph">${announcement.text}</p>
+      <a href="#">إقراء المزيد</a>
+    </div>
+  </div>`;
+}
+
+$(".announcements_slider_wrapper").html(`${announcements.map(announcementTemplate).join("")}`);
+
 
 // OUR SERVICES SECTION ---------------------------------------
 const services = [{
