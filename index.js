@@ -23,6 +23,12 @@
         - footer: move copyright to be on the left instead of in center.
 */
 
+// ANNOUNCEMENTS SECTION -------------------------------------
+const announcements = [{
+  "title":"",
+  "date":"",
+  "text":""
+}];
 
 // OUR SERVICES SECTION ---------------------------------------
 const services = [{

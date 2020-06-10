@@ -163,30 +163,43 @@ h3 {
   margin: 0 7.5% 0 15px;
 }
 
-.announcements_div {
+.announcements_slider_container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 4%;
 }
 
-.round_btn {
-  align-self: center;
-  margin: 0 2% 5%;
-  padding: 7px 10px;
+.announcements_slider_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 2%;
+}
+
+.slider_btn {
+  margin-bottom: 5%;
+  padding: 9px 15px 10px;
   color: #C11C2C;
-  font-size: 1.5rem;
-  text-decoration: none;
-  border: solid 1px lightgrey;
-  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: 1px solid lightgrey;
+  border-radius: 100%;
+  transition: 0.6s ease;
+  cursor: pointer;
+  /* user-select: none; */
 }
 
-.round_btn:hover {
+.slider_btn:hover {
   background-color: #f1f1f1;
 }
 
 .announcement_wrapper_div {
   display: flex;
   flex-direction: column;
-  width: 275px;
+  min-width: 275px;
   height: 375px;
   margin: 20px 40px 80px;
   border: solid 1px lightgrey;
