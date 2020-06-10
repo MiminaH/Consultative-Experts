@@ -344,8 +344,9 @@ h3 {
 
 .contact-us_details_div {
   display: flex;
+  flex-flow: wrap;
   justify-content: space-between;
-  margin: 0 15% 5%;
+  margin: 0 15% 5% 8%;
 }
 
 .contact-us_info_div {
@@ -353,6 +354,7 @@ h3 {
   flex-direction: column;
   font-size: 1.13rem;
   line-height: 1.6rem;
+  margin-bottom: 5%;
 }
 
 /************* FOOTER *************/

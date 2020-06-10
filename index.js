@@ -1,19 +1,23 @@
 // jshint esversion:6
 
+// (d)-Done , (c)-Cancelled.
 /* TO-DO:
     - style the scrolling bar on the right.
     - add elment appeearance animation upon loading the website or scrolling to a section.
-    - fix navigation bug when clicking a nav item to navigate to a section.
-    - announcements: add announcements section.
-    - services: add services details when clicking a service card.
+    - fix navigation bug when clicking a nav item to navigate to a section
+ (d)- announcements: add announcements section.
+ (c)- services: add services details when clicking a service card.
     - customers: (?)put customer logos in a carousel that scrolls automotically once loaded.
+    - add services details pages.
+    - add announcements page.
     - contact-us:
         - add location on map.
         - add messaging boxes (name, email/number, message).
         - send message via email or whatsapp.
     - responsive for mobile:
         - navbar: put nav items in hamburger menue button
-  (done)- header: fix header issue in smaller screens.
+     (d)- header: fix header issue in smaller screens.
+        - header: remove header text side margins (2 lines only, not 4!).
         - footer: move copyright to be on the left instead of in center.
 */
 
