@@ -28,6 +28,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  width: auto;
 }
 
 h3 {
@@ -122,32 +123,35 @@ h3 {
 
 /************* HEADER *************/
 .header_div {
-  /* min-height: 40vh; */
   position: relative;
   text-align: cover;
-  min-height: 30vh;
+  min-height: 90vh;
+  margin-top: 5vh;
+  /* min-height: 40vh; */
   /* margin-top: 25%; */
-}
-
-.header_div img {
-  max-width: 100%;
-  min-height: 60vh;
-  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  background-image: linear-gradient(rgba(38, 32, 96, 0.2), rgba(38, 32, 96, 0.4)), url("images\\header img2.jpg");
+  /* backdrop-filter: blur(0.8); */
+  filter: blur(2px);
 }
 
 .header_text {
   position: absolute;
-  top: 60%;
+  top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
-  /* margin: 25% 0; */
+  filter: blur(0);
 }
 
 .header_text h1 {
   color: white;
   background-color: rgba(193, 28, 44, 0.2);
   border-radius: 10px;
-  font-size: 2.7vw;
+  /* font-size: 2.7vw; */
+  font-size: 2.2rem;
   padding: 0.2rem 0.7rem;
   text-shadow: 1px 1px 10px black;
 }
@@ -254,17 +258,17 @@ h3 {
   display: flex;
   justify-content: center;
   flex-flow: wrap;
-  /* margin: 0 50vw; */
+  margin: 0 8vw;
 }
 
 .about-us_paragraph {
   display: flex;
   flex-direction: column;
   margin: 0 4vw;
-  font-size: 1.5vw;
-  line-height: 1.7rem;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
   width: 30vw;
-  /* width: 360px; */
+  min-width: 300px;
 }
 
 .about-us_paragraph p {
@@ -276,12 +280,13 @@ h3 {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
-  margin: 0 4% 10vh;
+  margin: 0 10vw 10vh;
 }
 
 .services_cards_div a {
   text-decoration: none;
   color: black;
+  margin: 10px 3vw;
 }
 
 .service_card {
@@ -289,10 +294,10 @@ h3 {
   justify-content: flex-start;
   align-items: center;
   height: auto;
-  width: 25vw;
+  width: 26vw;
+  min-width: 280px;
   /* height: 80px; */
   /* width: 325px */
-  margin: 10px 5.5vw;
   padding: 20px;
   font-size: 1.3rem;
   border: solid thin lightgrey;
@@ -359,7 +364,7 @@ h3 {
   color: #FAFAFA;
   border-radius: 5px;
   width: 100px;
-  padding: 0.45rem 0.7rem;
+  padding: 0.6rem 0.7rem;
 }
 
 .contact-us_details_div {
@@ -372,9 +377,13 @@ h3 {
 .contact-us_info_div {
   display: flex;
   flex-direction: column;
-  font-size: 1.13rem;
+  font-size: 1.3rem;
   line-height: 1.6rem;
   margin-bottom: 5%;
+}
+
+.contact-us_info_div p {
+  margin-bottom: 15px;
 }
 
 /************* FOOTER *************/
@@ -447,4 +456,85 @@ hr {
   border-top: 2px solid black;
   margin-top: 70px;
   width: 80%;
+}
+
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+@media only screen and (max-width: 750px) {
+
+  /* html {
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+    width: 100%;
+  } */
+  /* GENERIC CLASSES --------------------------------- */
+  .section_title_div {
+    margin: 50px 0 25px 0;
+  }
+
+  .section_title_vertical_line {
+    margin: 0 5% 0 10px;
+  }
+
+  .section_title_div p {
+    font-size: 0.9rem;
+    margin: auto 15px auto 3px;
+  }
+
+  /* NAVBAR -------------------------------------------- */
+  .logo_img, .nav_links_div {
+    padding-right: 2%;
+  }
+
+  .nav_links_div {
+    display: none;
+  }
+
+  /* HEADER -------------------------------------------- */
+  .header_div {
+    min-height: 70vh;
+    margin-top: 5vh;
+  }
+
+  .header_text {
+    top: 40%;
+    right: 23%;
+    transform: translate(15%, -50%);
+  }
+
+  .header_text h1 {
+    font-size: 1.7rem;
+    line-height: 2.4rem;
+  }
+
+  /* OUR SERVICES ------------------------------------- */
+  .services_cards_div {
+    margin-bottom: 5vh;
+  }
+
+  .service_card {
+    padding: 10px;
+  }
+
+  /* CONTACT US --------------------------------------- */
+  .contact_us_title_div {
+    margin: 60px 5% 25px 0;
+  }
+
+  .contact-us_details_div {
+    margin: 0 7% 5% 8%;
+  }
+
+  .contact-us_info_div {
+    font-size: 1.1rem;
+  }
+
+  .contact-us_map iframe {
+    width: auto;
+  }
+
+  /* FOOTER ------------------------------------------- */
+  .copyright_p {
+    margin: 0 0;
+    transform: translateX(0px);
+  }
 }
