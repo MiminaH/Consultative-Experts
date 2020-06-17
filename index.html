@@ -7,6 +7,11 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+
   <!-- Adding Slick for Slider (in Announcement) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha256-4hqlsNP9KM6+2eA8VUT0kk4RsMRTeS7QGHIM+MZ5sLY=" crossorigin="anonymous" />
@@ -17,17 +22,21 @@
 <body>
 
   <div class="double_nav_div">
-    <img class="logo_img" src="images\logo right-left (horizontal).jpg" alt="logo-img">
+    <div class="upper_navbar">
+      <img class="logo_img" src="images\logo right-left (horizontal).jpg" alt="logo-img">
+
+      <a class="hamburger_icon" onclick="menuClick()">
+        <i class="fas fa-bars fa-2x"></i>
+      </a>
+    </div>
 
     <div class="nav_links_div">
-      <a href="#">الرئيسية</a>
-      <a href="#announcements">أنباء وأخبار</a>
-      <a href="#about-us">تعرف علينا</a>
-      <a href="#our-services">خدماتنا</a>
-      <a href="#our-customers">عملائنا</a>
-      <div class="contact_us_btn_div">
-        <a href="#contact-us">تواصل معنا</a>
-      </div>
+      <a href="#" onclick="menuClick()">الرئيسية</a>
+      <a href="#announcements" onclick="menuClick()">أنباء وأخبار</a>
+      <a href="#about-us" onclick="menuClick()">تعرف علينا</a>
+      <a href="#our-services" onclick="menuClick()">خدماتنا</a>
+      <a href="#our-customers" onclick="menuClick()">عملائنا</a>
+      <a class="contact_us_btn_div" href="#contact-us" onclick="menuClick()">تواصل معنا</a>
     </div>
   </div>
 

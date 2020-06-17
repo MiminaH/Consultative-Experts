@@ -1,42 +1,57 @@
 // jshint esversion:6
 
-// (d)-Done , (c)-Cancelled.
 /* TO-DO:
     - style the scrolling bar on the right.
     - add elment appeearance animation upon loading the website or scrolling to a section.
     - fix navigation bug when clicking a nav item to navigate to a section
  (d)- announcements: add announcements section.
- (c)- services: add services details when clicking a service card.
     - customers: (?)put customer logos in a carousel that scrolls automotically once loaded.
     - add services details pages.
     - add announcements page.
     - contact-us:
-        - add location on map.
         - add messaging boxes (name, email/number, message).
         - send message via email or whatsapp.
     - responsive for mobile:
         - navbar: put nav items in hamburger menue button
-     (d)- header: fix header issue in smaller screens.
-        - header: remove header text side margins (2 lines only, not 4!).
-        - footer: move copyright to be on the left instead of in center.
 */
+
+// NAVBAR -------------------------------------
+/* Toggle between showing and hiding the navigation menu  when hamburger menu is clicked */
+function menuClick() {
+  const x = $('.nav_links_div');
+
+  x.toggleClass(".nav_links_div");
+
+  if (x.css('display') == 'flex' && x.css('z-index') == '1') {
+    // x.css('width', '0');
+    x.css('animation-direction', 'reverse');
+    x.css('display', 'none');
+  } else {
+    // x.css('width', '100vw');
+    x.css('animation-direction', 'normal');
+    x.css('display', 'flex');
+  }
+  x.toggleClass(".nav_links_div");
+
+}
 
 // ANNOUNCEMENTS SECTION -------------------------------------
 const announcements = [{
-  "title":"النباء الأول",
-  "date":"٩\\٠٦\\٢٠٢٠",
-  "text":"نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل. نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل.نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل."
-},
-{
-  "title":"النباء الثاني",
-  "date":"٩\\٠٦\\٢٠٢٠",
-  "text":"نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل."
-},
-{
-  "title":"النباء الثالث",
-  "date":"٩\\٠٦\\٢٠٢٠",
-  "text":"نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل."
-},];
+    "title": "النباء الأول",
+    "date": "٩\\٠٦\\٢٠٢٠",
+    "text": "نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل. نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل.نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل."
+  },
+  {
+    "title": "النباء الثاني",
+    "date": "٩\\٠٦\\٢٠٢٠",
+    "text": "نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل."
+  },
+  {
+    "title": "النباء الثالث",
+    "date": "٩\\٠٦\\٢٠٢٠",
+    "text": "نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل."
+  },
+];
 
 function announcementTemplate(announcement) {
   return `<div class="announcement_wrapper_div">
