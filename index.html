@@ -8,8 +8,6 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
 
   <!-- Adding Slick for Slider (in Announcement) -->
@@ -54,39 +52,29 @@
         <h2 class="section_title">أنباء وأخبار</h2>
       </div>
 
-      <div class="announcements_slider_container">
+      <div class="announcements_slidshow_wrapper">
 
         <!-- Next and previous buttons -->
-        <a class="slider_btn" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="slider_btn" onclick="sliderClicked(-1)">&#10094;</a>
 
-        <div class="announcements_slider_wrapper">
+        <div class="announcements_slidshow_container">
           <!-- rendering announcements using JavaScript -->
 
           <!-- <div class="announcement_wrapper_div">
             <div class="announcement_img">
-              <img src="images\announcements.jpg" alt="">
-            </div>
+              <img src="images\announcements.jpg" alt=""> </div>
             <div class="announcement_text_div">
               <h3>النباء الثاني</h3>
               <p class="announcement_date">٩\٠٦\٢٠٢٠</p>
-              <p class="announcement_paragraph">نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه
-                نموذج افتراضي يوضع في التصاميم لتعرض على العميل.
-              </p>
+              <p class="announcement_paragraph">نموذج افتراضي</p>
               <a href="#">إقراء المزيد</a>
             </div>
           </div> -->
         </div>
-        <a class="slider_btn" onclick="plusSlides(1)">&#10095;</a>
+
+        <a class="slider_btn" onclick="sliderClicked(1)">&#10095;</a>
       </div>
 
-      <br>
-
-      <!-- The dots/circles -->
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
     </div>
   </section>
 
@@ -123,7 +111,7 @@
       <!-- rendering cards using JavaScript -->
 
       <!-- <div class="service_card">
-        <img class="service_icon" src="images\icons\icons8-licence-100 (green).png" alt="">
+        <img class="service_icon" src="images\icons\icons8-licence-100 (green).png">
         <p>تأسيس كافة أنواع الشركات وفروعها داخل وخارج مصر</p>
       </div> -->
     </div>

@@ -16,23 +16,20 @@
 */
 
 // NAVBAR -------------------------------------
-/* Toggle between showing and hiding the navigation menu  when hamburger menu is clicked */
+/* Toggle between showing/hiding the navigation menu when hamburger menu is clicked */
 function menuClick() {
   const x = $('.nav_links_div');
 
-  x.toggleClass(".nav_links_div");
-
-  if (x.css('display') == 'flex' && x.css('z-index') == '1') {
-    // x.css('width', '0');
-    x.css('animation-direction', 'reverse');
-    x.css('display', 'none');
-  } else {
-    // x.css('width', '100vw');
-    x.css('animation-direction', 'normal');
-    x.css('display', 'flex');
+// checking z-index to apply below for mobile screens only.
+  if (x.css('z-index') == '1'){
+    if (x.css('display') == 'flex') {
+      // x.toggleClass(".nav_links_div");   toggle class to trigger reverse animation.
+      // x.toggleClass(".nav_links_div");
+      x.css('display', 'none');
+    } else {
+      x.css('display', 'flex');
+    }
   }
-  x.toggleClass(".nav_links_div");
-
 }
 
 // ANNOUNCEMENTS SECTION -------------------------------------
@@ -40,21 +37,27 @@ const announcements = [{
     "title": "النباء الأول",
     "date": "٩\\٠٦\\٢٠٢٠",
     "text": "نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل. نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل.نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل."
-  },
-  {
+  }, {
     "title": "النباء الثاني",
     "date": "٩\\٠٦\\٢٠٢٠",
     "text": "نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل."
-  },
-  {
+  }, {
     "title": "النباء الثالث",
+    "date": "٩\\٠٦\\٢٠٢٠",
+    "text": "نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل."
+  }, {
+    "title": "النباء الرابع",
+    "date": "٩\\٠٦\\٢٠٢٠",
+    "text": "نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل."
+  }, {
+    "title": "النباء الخامس",
     "date": "٩\\٠٦\\٢٠٢٠",
     "text": "نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل."
   },
 ];
 
-function announcementTemplate(announcement) {
-  return `<div class="announcement_wrapper_div">
+function announcementSlide(announcement) {
+  return `<div class="announcement_slide_div">
     <div class="announcement_img">
       <img src="images\\announcements.jpg" alt="">
     </div>
@@ -62,26 +65,49 @@ function announcementTemplate(announcement) {
       <h3>${announcement.title}</h3>
       <p class="announcement_date">${announcement.date}</p>
       <p class="announcement_paragraph">${announcement.text}</p>
-      <a href="#">إقراء المزيد</a>
+      <a href="service_details\\0-announcements.html">إقراء المزيد</a>
     </div>
   </div>`;
 }
 
-$(".announcements_slider_wrapper").html(`${announcements.map(announcementTemplate).join("")}`);
+$(".announcements_slidshow_container").html(`${announcements.map(announcementSlide).join("")}`);
 
+let slideIndex = 1;
+let translatepx = 0;
 // Announcement Sider
+function sliderClicked(n) {
+  if ((slideIndex+n) > 0 && (slideIndex+n) < 4){
+    slideIndex += n;
+    if (n == 1){
+      slideSlideshowChildren(translatepx+=320);
+    } else {
+      slideSlideshowChildren(translatepx-=320);
+    }
+  }
+}
 
-// .ready() when the page is loaded do what's inside function
-// $(document).ready(() => {
-//
-// });
+function slideSlideshowChildren (px){
+  for (i=1; i<=$(".announcements_slidshow_container").children().length ; i++){
+    $(`.announcement_slide_div:nth-child(${i})`).css("transform", `translateX(${px}px`);
+  }
+}
 
-// $('.slick').slick({
-//   infinite: true,
-//   slidesToShow: 3,
-//   slidesToScroll: 3,
-//   dots: true
-// });
+// ANNOUNCEMENTS PAGE -------------------------------------
+function announcementBox(announcement) {
+  return `<div class="announcement_box">
+    <div class="announcement_box_img">
+      <!-- <img src="images\\announcements.jpg" alt=""> -->
+    </div>
+    <div class="announcement_text_box">
+      <h3${announcement.title}</h3>
+      <p class="announcement_date">${announcement.date}</p>
+      <p>${announcement.text}</p>
+      <!-- <a href="service_details\\0-announcements.html">إقراء المزيد</a> -->
+    </div>
+  </div>`;
+}
+
+$(".announcements_container").html(`${announcements.map(announcementBox).join("")}`);
 
 // OUR-SERVICES SECTION ---------------------------------------
 const services = [{
@@ -187,17 +213,21 @@ $(".customers_cards_div").html(`${customers.map(customersTemplate).join("")}`);
 
 
 // DOUBLE NAVBAR (for services html) ---------------------------
-const doubleNavbarHTML = `<img class="logo_img" src="..\\images\\logo right-left (horizontal).jpg" alt="logo-img">
+const doubleNavbarHTML = `<div class="upper_navbar">
+  <img class="logo_img" src="..\\images\\logo right-left (horizontal).jpg" alt="logo-img">
+
+  <a class="hamburger_icon" onclick="menuClick()">
+    <i class="fas fa-bars fa-2x"></i>
+  </a>
+</div>
 
 <div class="nav_links_div">
-  <a href="#">الرئيسية</a>
-  <a href="#announcements">أنباء وأخبار</a>
-  <a href="#about-us">تعرف علينا</a>
-  <a href="#our-services">خدماتنا</a>
-  <a href="#our-customers">عملائنا</a>
-  <div class="contact_us_btn_div">
-    <a href="#contact-us">تواصل معنا</a>
-  </div>
+  <a href="../index.html#" onclick="menuClick()">الرئيسية</a>
+  <a href="../index.html#announcements" onclick="menuClick()">أنباء وأخبار</a>
+  <a href="../index.html#about-us" onclick="menuClick()">تعرف علينا</a>
+  <a href="../index.html#our-services" onclick="menuClick()">خدماتنا</a>
+  <a href="../index.html#our-customers" onclick="menuClick()">عملائنا</a>
+  <a class="contact_us_btn_div" href="../index.html#contact-us" onclick="menuClick()">تواصل معنا</a>
 </div>`;
 
 $(".nav_for_services").html(doubleNavbarHTML);
