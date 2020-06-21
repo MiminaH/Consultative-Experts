@@ -4,15 +4,10 @@
     - style the scrolling bar on the right.
     - add elment appeearance animation upon loading the website or scrolling to a section.
     - fix navigation bug when clicking a nav item to navigate to a section
- (d)- announcements: add announcements section.
     - customers: (?)put customer logos in a carousel that scrolls automotically once loaded.
-    - add services details pages.
-    - add announcements page.
     - contact-us:
         - add messaging boxes (name, email/number, message).
         - send message via email or whatsapp.
-    - responsive for mobile:
-        - navbar: put nav items in hamburger menue button
 */
 
 // NAVBAR -------------------------------------
@@ -33,29 +28,6 @@ function menuClick() {
 }
 
 // ANNOUNCEMENTS SECTION -------------------------------------
-const announcements = [{
-    "title": "النباء الأول",
-    "date": "٩\\٠٦\\٢٠٢٠",
-    "text": "نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل. نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل.نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل."
-  }, {
-    "title": "النباء الثاني",
-    "date": "٩\\٠٦\\٢٠٢٠",
-    "text": "نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل."
-  }, {
-    "title": "النباء الثالث",
-    "date": "٩\\٠٦\\٢٠٢٠",
-    "text": "نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل."
-  }, {
-    "title": "النباء الرابع",
-    "date": "٩\\٠٦\\٢٠٢٠",
-    "text": "نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل."
-  }, {
-    "title": "النباء الخامس",
-    "date": "٩\\٠٦\\٢٠٢٠",
-    "text": "نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم. وعند موافقه العميل المبدئيه نموذج افتراضي يوضع في التصاميم لتعرض على العميل."
-  },
-];
-
 function announcementSlide(announcement) {
   return `<div class="announcement_slide_div">
     <div class="announcement_img">
@@ -65,7 +37,7 @@ function announcementSlide(announcement) {
       <h3>${announcement.title}</h3>
       <p class="announcement_date">${announcement.date}</p>
       <p class="announcement_paragraph">${announcement.text}</p>
-      <a href="service_details\\0-announcements.html">إقراء المزيد</a>
+      <a href="extra_HTML\\0-announcements.html">إقراء المزيد</a>
     </div>
   </div>`;
 }
@@ -110,47 +82,6 @@ function announcementBox(announcement) {
 $(".announcements_container").html(`${announcements.map(announcementBox).join("")}`);
 
 // OUR-SERVICES SECTION ---------------------------------------
-const services = [{
-    "service": "تأسيس كافة أنواع الشركات وفروعها داخل وخارج مصر",
-    "icon": "images\\icons\\icons8-licence-100 (green).png",
-    "file": "service_details\\1-establishing_companies.html"
-  },
-  {
-    "service": "خدمات الاستثمار الصناعي",
-    "icon": "images\\icons\\icons8-factory-100 (brown).png",
-    "file": "service_details\\2-industrial_investment.html"
-  },
-  {
-    "service": "الخدمات الضريبية والمحاسبية",
-    "icon": "images\\icons\\icons8-ledger-100 (orange).png",
-    "file": "service_details\\3-tax_N_accounting.html"
-  },
-  {
-    "service": "خدمات رجال الاعمال",
-    "icon": "images\\icons\\icons8-permanent-job-100 (cyan).png",
-    "file": "service_details\\4-business_men.html"
-  },
-  {
-    "service": "خدمات الشركات",
-    "icon": "images\\icons\\icons8-business-building-100 (red).png",
-    "file": "service_details\\5-companies.html"
-  },
-  {
-    "service": "خدمات الاجانب",
-    "icon": "images\\icons\\icons8-travel-visa-100 (yellow).png",
-    "file": "service_details\\6-foreigners.html"
-  },
-  {
-    "service": "الاستشارات القانونية",
-    "icon": "images\\icons\\icons8-scales-100 (blue).png",
-    "file": "service_details\\7-legal_advice.html"
-  },
-  {
-    "service": "محكمه الاسرة",
-    "icon": "images\\icons\\icons8-family-100 (purple).png",
-    "file": "service_details\\8-family.html"
-  }
-];
 
 function serviceTemplate(service) {
   return `<a href="${service.file}">
@@ -165,44 +96,6 @@ $(".services_cards_div").html(`${services.map(serviceTemplate).join("")}`);
 
 
 // OUR-CUSTOMERS SECTION -------------------------------------
-const customers = [{
-    "image": "images\\customer logos\\Al-Amir.jpg"
-  },
-  {
-    "image": "images\\customer logos\\Cairo Trans.jpg"
-  },
-  {
-    "image": "images\\customer logos\\Cipro.jpg"
-  },
-  {
-    "image": "images\\customer logos\\El-Madar.jpg"
-  },
-  {
-    "image": "images\\customer logos\\Electroserv.jpg"
-  },
-  {
-    "image": "images\\customer logos\\GEI.jpg"
-  },
-  {
-    "image": "images\\customer logos\\Madkour Trade.jpg"
-  },
-  {
-    "image": "images\\customer logos\\Madkour.jpg"
-  },
-  {
-    "image": "images\\customer logos\\Orchid.jpg"
-  },
-  {
-    "image": "images\\customer logos\\Pyramids International.jpg"
-  },
-  {
-    "image": "images\\customer logos\\Pyramids Picon.jpg"
-  },
-  {
-    "image": "images\\customer logos\\Sector.jpg"
-  },
-];
-
 function customersTemplate(customer) {
   return `<div class="customer_card">
     <img src="${customer.image}" alt="">
@@ -212,9 +105,19 @@ function customersTemplate(customer) {
 $(".customers_cards_div").html(`${customers.map(customersTemplate).join("")}`);
 
 
+// --------------------- FOR THE EXTRA HTML PAGES -----------------------
+
+$(".extra_HTML_head").html(`<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../style.css">
+<!-- Fontawesome for hamburger menu on small screens -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">`);
+
 // DOUBLE NAVBAR (for services html) ---------------------------
 const doubleNavbarHTML = `<div class="upper_navbar">
+<a href="../index.html#">
   <img class="logo_img" src="..\\images\\logo right-left (horizontal).jpg" alt="logo-img">
+</a>
 
   <a class="hamburger_icon" onclick="menuClick()">
     <i class="fas fa-bars fa-2x"></i>
@@ -238,8 +141,8 @@ const contactUsHTML = `<div class="contact_us_title_div">
   <p class="contact-us_title">تواصل معنا</p>
 </div>
 
-<div class="contact-us_details_div">
-  <div class="contact-us_info_div">
+<div class="contact_details_wrapper">
+  <div class="contact-details">
     <p><span>العنوان:</span> ٩ عمارات مترو سيتي, شارع الخمسيني, زهراء المعادي, المعادي, القاهرة</p>
     <p><span>أرضي وفاكس:</span> ٠٢٢٧٣٤٠٥٤٥</p>
     <p><span>موبيل:</span> ٠١٠٦٦٦٦٤٦٦٠ / <span>واتس:</span> ٠١١٤٠١٠٧٩٧٩</p>

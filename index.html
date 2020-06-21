@@ -21,7 +21,8 @@
 
   <div class="double_nav_div">
     <div class="upper_navbar">
-      <img class="logo_img" src="images\logo right-left (horizontal).jpg" alt="logo-img">
+      <a href="#">
+        <img class="logo_img" src="images\logo right-left (horizontal).jpg" alt="logo-img"></a>
 
       <a class="hamburger_icon" onclick="menuClick()">
         <i class="fas fa-bars fa-2x"></i>
@@ -138,13 +139,33 @@
       <p class="contact-us_title">تواصل معنا</p>
     </div>
 
-    <div class="contact-us_details_div">
-      <div class="contact-us_info_div">
+    <div class="contact_details_wrapper">
+      <!-- <div class="contact_form">
+          <input type="text" class="text" placeholder="الإسم">
+          <input type="email" class="text" placeholder="البريد الإلكتروني">
+          <input type="text" class="text" placeholder="رقم التيليفون">
+          <textarea class="text" rows="4" cols="80" placeholder="رسالتك"></textarea>
+          <input type="submit" class="btn" value="إرسل">
+        </div> -->
+
+      <div class="contact-details">
         <p><span>العنوان:</span> ٩ عمارات مترو سيتي, شارع الخمسيني, زهراء المعادي, المعادي, القاهرة</p>
         <p><span>أرضي وفاكس:</span> ٠٢٢٧٣٤٠٥٤٥</p>
         <p><span>موبيل:</span> ٠١٠٦٦٦٦٤٦٦٠ / <span>واتس:</span> ٠١١٤٠١٠٧٩٧٩</p>
         <p><span>بريد إلكتروني:</span> Sherif.nassar@c-experts.com</p>
+        <div class="contact_icons">
+          <a class="icon" href="https://www.facebook.com/shreifnassarnassar" onclick="clickFunction()">
+            <i class="fab fa-facebook fa-2x" style="color:#4267B2;"></i>
+          </a>
+          <a href="#">
+            <i class="fas fa-envelope fa-2x" style="color:#ffca28;"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=201140107979">
+            <i class="fab fa-whatsapp fa-2x" style="color:#25D366;"></i>
+          </a>
+        </div>
       </div>
+
       <div class="contact-us_map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.4843052600336!2d31.314252084886707!3d29.965508681911036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145839ee07b964cb%3A0xb0226e309dcdf5a!2z2LTYsdmD2Kkg2KfZhNiu2KjYsdin2KEg2KfZhNil2LPYqti02KfYsdmK2YjZhg!5e0!3m2!1sar!2seg!4v1591781122894!5m2!1sar!2seg"
@@ -165,7 +186,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>
 
-  <script src="index.js" charset="utf-8"></script>
+  <script src="JS/jsonObjects.js" charset="utf-8"></script>
+  <script src="JS/index.js" charset="utf-8"></script>
 </footer>
 
 </html>

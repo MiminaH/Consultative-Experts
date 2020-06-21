@@ -141,7 +141,7 @@ h3 {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
-  background-image: linear-gradient(rgba(38, 32, 96, 0.2), rgba(38, 32, 96, 0.4)), url("images\\header img2.jpg");
+  background-image: linear-gradient(rgba(38, 32, 96, 0.2), rgba(38, 32, 96, 0.4)), url("\images\\header img2.jpg");
   /* backdrop-filter: blur(0.8); */
   filter: blur(2px);
 }
@@ -207,7 +207,7 @@ h3 {
   font-size: 1.2rem;
   border: 1px solid lightgrey;
   border-radius: 100%;
-  transition: 0.6s ease;
+  transition: 0.5s ease;
   cursor: pointer;
   /* user-select: none; */
 }
@@ -286,7 +286,7 @@ h3 {
   max-width: 75vw;
   height: 40vw;
   max-height: 300px;
-  background-image: url("images\\announcements.jpg");
+  background-image: url("\images\\announcements.jpg");
   text-align: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -418,7 +418,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 60px 13% 40px 0;
+  margin: 60px 13% 50px 0;
   font-size: 1.4rem;
   background-color: #C11C2C;
   color: #FAFAFA;
@@ -427,14 +427,59 @@ h3 {
   padding: 0.6rem 0.7rem;
 }
 
-.contact-us_details_div {
+.contact_details_wrapper {
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
   margin: 0 15% 5% 8%;
 }
 
-.contact-us_info_div {
+/* .contact_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.contact_form .text {
+  display: block;
+  width: auto;
+  margin: 0 10px 10px;
+  padding: 10px 40px;
+  outline: none;
+  color: rgba(38, 32, 96, 0.7);
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.contact_form .text:focus {
+  box-shadow: 0 0 2px 2px lightgrey;
+}
+
+.contact_form textarea {
+  resize: none;
+  height: 120px;
+  font-size: 1rem;
+}
+
+.contact_form .btn {
+  align-self: flex-start;
+  border: 0;
+  background-color: lightgrey;
+  color: #262060;
+  font-weight: bold;
+  padding: 12px 50px;
+  border-radius: 10px;
+  margin: 10px 5px 50px;
+  font-size: 1rem;
+}
+
+.contact_form .btn:hover {
+  background-color: grey;
+} */
+
+.contact-details {
   display: flex;
   flex-direction: column;
   font-size: 1.3rem;
@@ -442,9 +487,18 @@ h3 {
   margin-bottom: 5%;
 }
 
-.contact-us_info_div p {
+.contact-details p {
   margin-bottom: 15px;
 }
+
+.contact_icons {
+  display: flex;
+}
+
+.contact_icons a {
+  margin: 10px 0 40px 15px;
+}
+
 
 /************* FOOTER *************/
 footer {
@@ -591,8 +645,25 @@ hr {
   }
 
   .header_text h1 {
+    width: 240px;
     font-size: 1.7rem;
     line-height: 2.4rem;
+  }
+
+/* ANNOUNCEMENTS ------------------------------------- */
+.announcements_slidshow_wrapper {
+  margin: 0 2%;
+}
+
+  .slider_btn {
+    padding: 6px 13px 8px;
+    font-size: 1rem;
+  }
+
+  .announcement_slide_div {
+    min-width: 200px;
+    height: 325px;
+    margin: 20px 15px 50px;
   }
 
   /* OUR SERVICES ------------------------------------- */
@@ -609,11 +680,11 @@ hr {
     margin: 60px 5% 25px 0;
   }
 
-  .contact-us_details_div {
+  .contact_details_wrapper {
     margin: 0 7% 5% 8%;
   }
 
-  .contact-us_info_div {
+  .contact-us_details {
     font-size: 1.1rem;
   }
 
