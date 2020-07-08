@@ -1,15 +1,5 @@
 // jshint esversion:6
 
-/* TO-DO:
-    - style the scrolling bar on the right.
-    - add elment appeearance animation upon loading the website or scrolling to a section.
-    - fix navigation bug when clicking a nav item to navigate to a section
-    - customers: (?)put customer logos in a carousel that scrolls automotically once loaded.
-    - contact-us:
-        - add messaging boxes (name, email/number, message).
-        - send message via email or whatsapp.
-*/
-
 // NAVBAR -------------------------------------
 /* Toggle between showing/hiding the navigation menu when hamburger menu is clicked */
 function menuClick() {
@@ -37,7 +27,7 @@ function announcementSlide(announcement) {
       <h3>${announcement.title}</h3>
       <p class="announcement_date">${announcement.date}</p>
       <p class="announcement_paragraph">${announcement.text}</p>
-      <a href="extra_HTML\\0-announcements.html">إقراء المزيد</a>
+      <a href="subpages\\0-announcements.html">إقراء المزيد</a>
     </div>
   </div>`;
 }
@@ -105,7 +95,7 @@ function customersTemplate(customer) {
 $(".customers_cards_div").html(`${customers.map(customersTemplate).join("")}`);
 
 
-// --------------------- FOR THE EXTRA HTML PAGES -----------------------
+// FOR THE EXTRA HTML PAGES -----------------------------------
 
 $(".extra_HTML_head").html(`<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -130,10 +120,10 @@ const doubleNavbarHTML = `<div class="upper_navbar">
   <a href="../index.html#about-us" onclick="menuClick()">تعرف علينا</a>
   <a href="../index.html#our-services" onclick="menuClick()">خدماتنا</a>
   <a href="../index.html#our-customers" onclick="menuClick()">عملائنا</a>
-  <a class="contact_us_btn_div" href="../index.html#contact-us" onclick="menuClick()">تواصل معنا</a>
+  <a class="contact_us_btn_div" href="#contact-us" onclick="menuClick()">تواصل معنا</a>
 </div>`;
 
-$(".nav_for_services").html(doubleNavbarHTML);
+$(".doubleNav_from_JS").html(doubleNavbarHTML);
 
 
 // CONTACT-US SECTION (for services html) ---------------------------
@@ -142,12 +132,22 @@ const contactUsHTML = `<div class="contact_us_title_div">
 </div>
 
 <div class="contact_details_wrapper">
-  <div class="contact-details">
-    <p><span>العنوان:</span> ٩ عمارات مترو سيتي, شارع الخمسيني, زهراء المعادي, المعادي, القاهرة</p>
-    <p><span>أرضي وفاكس:</span> ٠٢٢٧٣٤٠٥٤٥</p>
-    <p><span>موبيل:</span> ٠١٠٦٦٦٦٤٦٦٠ / <span>واتس:</span> ٠١١٤٠١٠٧٩٧٩</p>
-    <p><span>بريد إلكتروني:</span> Sherif.nassar@c-experts.com</p>
+
+<div class="contact-details">
+  <p><span>العنوان:</span> ٩ عمارات مترو سيتي, شارع الخمسيني, زهراء المعادي, المعادي, القاهرة</p>
+  <p><span>أرضي / فاكس:</span> ٠٢٢٧٣٤٠٥٤٥</p>
+  <p><span>رقم التواصل:</span> ٠١١٤٠٦٤٠٦٠٣</p>
+  <p><span>بريد إلكتروني:</span> Sherif.nassar@c-experts.com</p>
+  <div class="contact_icons">
+    <a class="icon" href="https://www.facebook.com/ConsultativeExperts" onclick="clickFunction()">
+      <i class="fab fa-facebook fa-2x" style="color:#4267B2;"></i></a>
+    <a href="mailto:sherif.nassar@c-experts.com">
+      <i class="fas fa-envelope fa-2x" style="color:#ffca28;"></i></a>
+    <a href="https://api.whatsapp.com/send?phone=201140640603">
+      <i class="fab fa-whatsapp fa-2x" style="color:#25D366;"></i></a>
   </div>
+</div>
+
   <div class="contact-us_map">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.4843052600336!2d31.314252084886707!3d29.965508681911036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145839ee07b964cb%3A0xb0226e309dcdf5a!2z2LTYsdmD2Kkg2KfZhNiu2KjYsdin2KEg2KfZhNil2LPYqti02KfYsdmK2YjZhg!5e0!3m2!1sar!2seg!4v1591781122894!5m2!1sar!2seg"
@@ -164,3 +164,12 @@ const copyrightHTML = `<div class="copyright_div">
   <p class="created-by_p">Create by <a href="https://miminah.github.io/MiminaWebsite/tech.html">Mimina</a></p>
 </div>`;
 $(".footer_section").html(copyrightHTML);
+
+
+
+/* TO-DO:
+    - style the scrolling bar on the right.
+    - add elment appeearance animation upon loading the website or scrolling to a section.
+    - fix navigation bug when clicking a nav item to navigate to a section
+    - customers: (?)put customer logos in a carousel that scrolls automotically once loaded.
+*/

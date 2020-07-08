@@ -94,12 +94,6 @@ h3 {
 
 .hamburger_icon {
   display: none;
-  color: var(--blue);
-  margin: 2%;
-}
-
-.hamburger_icon i {
-  margin: 5px 7px;
 }
 
 .nav_links_div {
@@ -499,6 +493,9 @@ h3 {
   margin: 10px 0 40px 15px;
 }
 
+.contact_icons a:hover {
+  opacity: 0.5;
+}
 
 /************* FOOTER *************/
 footer {
@@ -601,6 +598,12 @@ hr {
 
   .hamburger_icon {
     display: block;
+    color: var(--blue);
+    margin: 2%;
+  }
+
+  .hamburger_icon i {
+    margin: 5px 7px;
   }
 
   .nav_links_div {
@@ -608,7 +611,7 @@ hr {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 100px);
     position: fixed;
     z-index: 1;
     top: 60px;
@@ -640,8 +643,8 @@ hr {
 
   .header_text {
     top: 40%;
-    right: 23%;
-    transform: translate(15%, -50%);
+    right: 51%;
+    /* transform: translate(0%, -30vh); */
   }
 
   .header_text h1 {

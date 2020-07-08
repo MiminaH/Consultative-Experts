@@ -34,42 +34,42 @@ const announcements = [{
 const services = [{
     "service": "تأسيس كافة أنواع الشركات وفروعها داخل وخارج مصر",
     "icon": "images\\icons\\icons8-licence-100 (green).png",
-    "file": "extra_HTML\\1-establishing_companies.html"
+    "file": "subpages\\1-establishing_companies.html"
   },
   {
     "service": "خدمات الاستثمار الصناعي",
     "icon": "images\\icons\\icons8-factory-100 (brown).png",
-    "file": "extra_HTML\\2-industrial_investment.html"
+    "file": "subpages\\2-industrial_investment.html"
   },
   {
     "service": "الخدمات الضريبية والمحاسبية",
     "icon": "images\\icons\\icons8-ledger-100 (orange).png",
-    "file": "extra_HTML\\3-tax_N_accounting.html"
+    "file": "subpages\\3-tax_N_accounting.html"
   },
   {
     "service": "خدمات رجال الاعمال",
     "icon": "images\\icons\\icons8-permanent-job-100 (cyan).png",
-    "file": "extra_HTML\\4-business_men.html"
+    "file": "subpages\\4-business_men.html"
   },
   {
     "service": "خدمات الشركات",
     "icon": "images\\icons\\icons8-business-building-100 (red).png",
-    "file": "extra_HTML\\5-companies.html"
+    "file": "subpages\\5-companies.html"
   },
   {
     "service": "خدمات الاجانب",
     "icon": "images\\icons\\icons8-travel-visa-100 (yellow).png",
-    "file": "extra_HTML\\6-foreigners.html"
+    "file": "subpages\\6-foreigners.html"
   },
   {
     "service": "الاستشارات القانونية",
     "icon": "images\\icons\\icons8-scales-100 (blue).png",
-    "file": "extra_HTML\\7-legal_advice.html"
+    "file": "subpages\\7-legal_advice.html"
   },
   {
     "service": "محكمه الاسرة",
     "icon": "images\\icons\\icons8-family-100 (purple).png",
-    "file": "extra_HTML\\8-family.html"
+    "file": "subpages\\8-family.html"
   }
 ];
 
@@ -110,13 +110,5 @@ const customers = [{
   },
   {
     "image": "images\\customer logos\\Sector.jpg"
-  },
-];
-
-// EXTRA PAGES -------------------------------------------------
-const extraPages = [{
-    "page": "0_announcements",
-    "title": "خدمات تأسيس الشركات",
-    "content": {}
   },
 ];
