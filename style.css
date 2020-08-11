@@ -135,7 +135,7 @@ h3 {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
-  background-image: linear-gradient(rgba(38, 32, 96, 0.2), rgba(38, 32, 96, 0.4)), url("\images\\header img2.jpg");
+  background-image: linear-gradient(rgba(38, 32, 96, 0.2), rgba(38, 32, 96, 0.4)), url("\images\\header img.jpg");
   /* backdrop-filter: blur(0.8); */
   filter: blur(2px);
 }
