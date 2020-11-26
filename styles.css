@@ -72,6 +72,10 @@ h3 {
 }
 
 /************* NAVBAR *************/
+.social-btn p{
+  margin: 5px 0;
+}
+
 .double_nav_div {
   position: fixed;
   top: 0;
@@ -87,9 +91,9 @@ h3 {
 }
 
 .logo_img {
-  width: 230px;
+  width: 350px;
   height: 60px;
-  padding-right: 13%;
+  padding-right: 11vw;
 }
 
 .hamburger_icon {
@@ -569,6 +573,142 @@ hr {
   width: 80%;
 }
 
+/************* Social Button *************/
+.wrapper {
+  width: 100%;
+}
+.wrapper .hamburger {
+  /* width: 100px;
+  height: 100px; */
+  border-radius: 50%;
+  margin: 50px auto;
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+  z-index: 2;
+  /* position: relative; */
+  
+  /* below is my code */
+  position: fixed;
+  bottom: 1%;
+  left: 5%;
+  height: 60px;
+  width: 60px;
+}
+.wrapper .cont {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #C11C2C;
+}
+.wrapper .line {
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background: #464646;
+  margin: 7px auto;
+  z-index: 2;
+  position: relative;
+  transition: all 0.4s linear 0.2s !important;
+  top: 16px;
+}
+.wrapper .spin {
+  animation: spin 0.5s ease-in-out;
+}
+.wrapper .unspin {
+  animation: spin 0.5s ease-in-out;
+  animation-direction: reverse;
+}
+.wrapper #bubble1, .wrapper #bubble2, .wrapper #bubble3, .wrapper #bubble4, .wrapper #bubble5 {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  opacity: 1;
+  position: absolute;
+  /* left: 5px; */
+  transition: all 0.2s ease 0s;
+  border-radius: 50%;
+  line-height: 120px;
+}
+/* .wrapper #bubble1 {
+  top: 16px;
+}
+.wrapper #bubble2 {
+  top: 16px;
+}
+.wrapper #bubble3 {
+  top: 16px;
+}
+.wrapper #bubble4 {
+  top: 16px;
+} */
+.out1, .out2, .out3, .out4 {
+  transition: all 0.4s linear 0.1s !important;
+  left: -2px !important;
+}
+.out1 {
+  top: -65px !important;
+  background: #4267B2;
+}
+.out2 {
+  top: -130px !important;
+  background: #ffca28;
+}
+.out3 {
+  top: -195px !important;
+  background: #25D366;
+}
+.out4 {
+  top: -260px !important;
+  background: #0e76a8;
+}
+.out5 {
+  top: -325px !important;
+  background: #FF0000;
+}
+.cross1, .cross3 {
+  background: #fff !important;
+}
+.cross2 {
+  opacity: 0 ! important;
+}
+.cross1 {
+  top: 27px ! important;
+  transform: rotate(45deg);
+}
+.cross3 {
+  top: 3px ! important;
+  transform: rotate(-45deg);
+}
+@keyframes spin {
+  0% {
+      transform: rotate(270deg);
+      opacity: 0;
+ }
+  100% {
+      transform: rotate(0deg);
+      opacity: 1;
+ }
+}
+
+.bubble  {
+  display: none;
+}
+
+.bubble a i{
+  position: relative;
+  color: white;
+  font-size: 45px;
+  top: -18px;
+  /* margin: 0 5px 60px 0; */
+}
+
+.bubble a i:hover{
+  opacity: 0.8;
+}
+
+/************* Media Query *************/
 /* If the screen size is 600px or less, set the font-size of <div> to 30px */
 @media only screen and (max-width: 750px) {
 
@@ -728,3 +868,5 @@ hr {
     width: 95%;
   }
 }
+
+
