@@ -156,7 +156,8 @@ $('.extra_HTML_head').html(`<meta charset="utf-8">
 // DOUBLE NAVBAR (for services html) --------------------------- -------------------------------------
 const doubleNavbarHTML = `<div class="upper_navbar">
 <a href="../index.html#">
-  <img class="logo_img" src="..\\images\\logo right-left (horizontal).jpg" alt="logo-img">
+  <img class="logo_img" src="..\\images\\logo (designer).jpg" alt="logo-img"></a>
+  <!-- <img class="logo_img" src="..\\images\\logo right-left (horizontal).jpg" alt="logo-img"> -->
 </a>
   <a class="hamburger_icon" onclick="menuClick()">
     <i class="fas fa-bars fa-2x"></i>
